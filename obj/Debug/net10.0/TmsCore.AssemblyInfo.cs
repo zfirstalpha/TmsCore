@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TmsCore")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+18f132b08e3c80198b8de21335211c576ba6ca99")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2aa9661cdfbd2efddcbac87d6e1566ee65607e76")]
 [assembly: System.Reflection.AssemblyProductAttribute("TmsCore")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TmsCore")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
