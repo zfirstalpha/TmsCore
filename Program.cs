@@ -21,8 +21,8 @@
 // Console.WriteLine($"Enrolled: {enrolledAt:yyyy-MM-dd}");
 // Console.WriteLine($"Campus: {campusRegion ?? "Not assigned"}");
 
-var enrollment = new EnrollmentRecord ("STU-001", "CS-401", DateTime.UtcNow);
-Console.WriteLine(enrollment);
+// var enrollment = new EnrollmentRecord ("STU-001", "CS-401", DateTime.UtcNow);
+// Console.WriteLine(enrollment);
 
 
 //  var corrected = enrollment with { CourseCode = "CS-402" };
@@ -53,5 +53,21 @@ Console.WriteLine(enrollment);
 // }
 
 
-var s = new Student { Id = "S1", Name = "Abeba", Age = 20, GPA = 3.8m };
-Console.WriteLine($"Student: {s.Name}, GPA: {s.GPA}");
+// var s = new Student { Id = "S1", Name = "Abeba", Age = 20, GPA = 3.8m };
+// Console.WriteLine($"Student: {s.Name}, GPA: {s.GPA}");
+
+void PrintGradeReport(IEnumerable<IGradable> assessments)
+{
+    Console.WriteLine("--- Grade Report ---");
+    foreach (var item in assessments)
+    {
+        Console.WriteLine($"{item.Title}: {item.CalculateGrade():F2}%");
+    }
+}
+IGradable[] cohortAssessments = [
+new Quiz { Title = "C# Basics", CorrectAnswers = 18, TotalQuestions = 20 },
+new LabAssignment { Title = "Registration API", FunctionalityScore = 90m, CodeQualityScore =
+85m }
+];
+
+PrintGradeReport(cohortAssessments);
