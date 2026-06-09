@@ -8,8 +8,8 @@ if(student is null)
 if(course is null)
     throw new ArgumentNullException(nameof(course));
 
-if(course.Capacity <= 0)
-    throw new InvalidOperationException();
+if (course.EnrolledCount >= course.Capacity)
+throw new CapacityReachedException(course.Code);
 
 
 string standing = student.GPA switch
@@ -18,7 +18,7 @@ string standing = student.GPA switch
     >= 2.5m => "Good Standing",
     _ => "Academic Warning"
 };
-
+Console.WriteLine($" {student.Name} is in {standing}.");
 return new EnrollmentRecord(
     student.Id,
     course.Code,
